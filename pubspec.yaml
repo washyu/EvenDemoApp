@@ -44,6 +44,10 @@ dependencies:
   crclib: ^3.0.0
   # Toast - https://pub.dev/packages/fluttertoast
   fluttertoast: ^8.2.8
+  
+  # Local plugins
+  even_pomodoro:
+    path: modules/even_pomodoro/
 
 
 dev_dependencies:

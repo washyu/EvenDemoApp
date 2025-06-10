@@ -6,6 +6,7 @@ import 'package:demo_ai_even/ble_manager.dart';
 import 'package:demo_ai_even/services/evenai.dart';
 import 'package:demo_ai_even/views/even_list_page.dart';
 import 'package:demo_ai_even/views/features_page.dart';
+import 'package:demo_ai_even/views/settings_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -93,6 +94,22 @@ class _HomePageState extends State<HomePage> {
           actions: [
             InkWell(
               onTap: () {
+                print("To Settings Page...");
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SettingsPage()),
+                );
+              },
+              splashColor: Colors.transparent,
+              highlightColor: Colors.transparent,
+              child: const Padding(
+                padding:
+                    EdgeInsets.only(left: 8, top: 12, bottom: 14, right: 8),
+                child: Icon(Icons.settings),
+              ),
+            ),
+            InkWell(
+              onTap: () {
                 print("To Features Page...");
                 Navigator.push(
                   context,
@@ -103,7 +120,7 @@ class _HomePageState extends State<HomePage> {
               highlightColor: Colors.transparent,
               child: const Padding(
                 padding:
-                    EdgeInsets.only(left: 16, top: 12, bottom: 14, right: 16),
+                    EdgeInsets.only(left: 8, top: 12, bottom: 14, right: 16),
                 child: Icon(Icons.menu),
               ),
             ),

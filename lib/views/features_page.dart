@@ -3,6 +3,7 @@
 import 'package:demo_ai_even/views/features/bmp_page.dart';
 import 'package:demo_ai_even/views/features/notification/notification_page.dart';
 import 'package:demo_ai_even/views/features/text_page.dart';
+import 'package:demo_ai_even/views/features/pomodoro_integration.dart';
 import 'package:flutter/material.dart';
 
 class FeaturesPage extends StatefulWidget {
@@ -82,6 +83,31 @@ class _FeaturesPageState extends State<FeaturesPage> {
                   child: const Text(
                     "Text",
                     style: TextStyle(fontSize: 16),
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTap: () async {
+                  PomodoroIntegration.navigateToPomodoroPage(context);
+                },
+                child: Container(
+                  height: 60,
+                  decoration: BoxDecoration(
+                    color: Colors.red[100],
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  alignment: Alignment.center,
+                  margin: const EdgeInsets.only(top: 16),
+                  child: const Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.timer, color: Colors.red),
+                      SizedBox(width: 8),
+                      Text(
+                        "Pomodoro Timer",
+                        style: TextStyle(fontSize: 16, color: Colors.red),
+                      ),
+                    ],
                   ),
                 ),
               ),
